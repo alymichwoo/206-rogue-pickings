@@ -28,26 +28,13 @@ h4 {
   font-weight: 700;
 }
 
-h1 {
-  font-size: 1.875em;
-}
-
-h2 {
-  font-size: 1em;
-}
-
-h3 {
-  font-size: 1.125em;
-}
-
-h4 {
-  font-size: 0.75em;
-}
-
 p {
   font-size: 0.875em;
   line-height: 21px;
-  padding: 0 30px;
+}
+
+ul {
+  margin: 0;
 }
 
 /*The widths are in a percentage!*/
@@ -105,29 +92,22 @@ header nav ul li a {
   flex-flow: row wrap;
 }
 
-.main-image {
-  height: auto;
-}
-
 .main-image img {
   width: 100%;
   border-bottom: 3px solid #77a466;
-}
-
-.main-title {
-  height: auto;
 }
 
 .main-title h3 {
   text-align: left;
   padding: 5px 0;
   color: #77a466;
+  font-size: 1.125em;
 }
 
 .main-title p {
   padding: 0;
   font-size: 1em;
-  line-height: 25px;
+  line-height: 1.5625;
 }
 
 .section-one,
@@ -135,20 +115,6 @@ header nav ul li a {
 .section-three {
   width: 100%;
   border-top: 1px solid #eee;
-}
-
-.section-one h4 {
-  padding: 10px 0;
-}
-
-.section-two {
-  border-left: 1px solid #eee;
-  border-right: 1px solid #eee;
-}
-
-.section-two h4,
-.section-three h4 {
-  padding: 10px 30px;
 }
 
 .menu {
@@ -188,4 +154,47 @@ footer span {
   text-transform: lowercase;
   color: #77a466;
   font-size: .875em;
+}
+
+@media all and (min-width: 768px) {
+  .bottom-section {
+    justify-content: space-between;
+    align-items: flex-start;
+    border-top: 1px solid #eee;
+  }
+
+  .section-one,
+  .section-two,
+  .section-three, {
+    border-top: none;
+    flex-basis: 30%;
+  }
+
+  .section-two {
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+    padding: 0 20px;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  header {
+    justify-content: space-between;
+  }
+
+  header h1 {
+    width: 30%;
+    padding: 0;
+    border-bottom: none;
+    text-align: left;
+  }
+
+  header nav {
+    width: 40%;
+  }
+
+  header nav ul {
+    display: flex;
+    justify-content: space-between;
+  }
 }
